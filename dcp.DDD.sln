@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel.SuperTypes", "Source\DomainModel.SuperTypes\DomainModel.SuperTypes.csproj", "{82AB72F9-6ABA-486E-8B01-007C6170CA20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data.EF.SuperTypes", "Source\Infrastructure.Data.EF.SuperTypes\Infrastructure.Data.EF.SuperTypes.csproj", "{06EFECF3-C652-4FB5-B2D6-A32A1BAF47E4}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Source\\DomainModel.SuperTypes\\DomainModel.SuperTypes.csproj
+		SccProjectName1 = Source/DomainModel.SuperTypes
+		SccLocalPath1 = Source\\DomainModel.SuperTypes
+		SccProjectUniqueName2 = Source\\Infrastructure.Data.EF.SuperTypes\\Infrastructure.Data.EF.SuperTypes.csproj
+		SccProjectName2 = Source/Infrastructure.Data.EF.SuperTypes
+		SccLocalPath2 = Source\\Infrastructure.Data.EF.SuperTypes
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82AB72F9-6ABA-486E-8B01-007C6170CA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AB72F9-6ABA-486E-8B01-007C6170CA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AB72F9-6ABA-486E-8B01-007C6170CA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AB72F9-6ABA-486E-8B01-007C6170CA20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06EFECF3-C652-4FB5-B2D6-A32A1BAF47E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06EFECF3-C652-4FB5-B2D6-A32A1BAF47E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06EFECF3-C652-4FB5-B2D6-A32A1BAF47E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06EFECF3-C652-4FB5-B2D6-A32A1BAF47E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
