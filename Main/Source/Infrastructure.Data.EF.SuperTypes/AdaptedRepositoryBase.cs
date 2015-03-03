@@ -16,7 +16,8 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         protected new readonly DbSet<TData> Set;
         private readonly ReplaceTypeVisitor _replaceTypeVisitor;
 
-        protected AdaptedRepositoryBase(IUnitOfWork unitOfWork, Dictionary<Type, Type> typesMappings, IEnumerable<Expression<Func<TData, object>>> keys) : base(unitOfWork, keys)
+        protected AdaptedRepositoryBase(IUnitOfWork unitOfWork, Dictionary<Type, Type> typesMappings, IEnumerable<Expression<Func<TData, object>>> keys) 
+            : base(unitOfWork, keys.ToArray())
         {
             
             _replaceTypeVisitor = new ReplaceTypeVisitor(typesMappings);

@@ -10,6 +10,10 @@ namespace dcp.DDD.DomainModel.SuperTypes
         IEnumerable<T> GetAll();
         
         T Find(params object[] keyValues);
+        T Find(object keyValue, params Expression<Func<T, object>>[] includePaths);
+        T Find(object[] keyValues, IEnumerable<Expression<Func<T, object>>> includePaths);
+        TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
+        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths);
 
         IEnumerable<T> FindBy(IQueryCommand<T> queryObject);
         int CountBy(IQueryCommand<T> queryObject);
@@ -22,11 +26,7 @@ namespace dcp.DDD.DomainModel.SuperTypes
 
         int CountBy(Expression<Func<T, bool>> predicate);
         bool AnyBy(Expression<Func<T, bool>> predicate);
-
-        T Find(object[] keyValues, IEnumerable<Expression<Func<T, object>>> includePaths);
-        T Find(object keyValue, params Expression<Func<T, object>>[] includePaths);
-        TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
-        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths);
+        
         IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
         IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths);
         IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);

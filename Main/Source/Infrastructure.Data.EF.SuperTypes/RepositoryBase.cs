@@ -18,7 +18,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         protected readonly ObjectContext ObjectContext;
         protected readonly ObjectSet<T> ObjectSet;
 
-        protected RepositoryBase(IUnitOfWork unitOfWork, IEnumerable<Expression<Func<T, object>>> keys)
+        protected RepositoryBase(IUnitOfWork unitOfWork, params Expression<Func<T, object>>[] keys)
         {
             _keys = keys;
             Context = (DbContext)unitOfWork;
@@ -161,7 +161,12 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             var i = 0;
             foreach (var key in keys)
             {
-                objectQuery = objectQuery.Where("It." + key.Name + "=" + keyValues[i]);
+                if (key.Body.NodeType != ExpressionType.Convert) 
+                    throw new ArgumentException("Entity keys are incorrect");
+
+                var u = (UnaryExpression)key.Body;
+                var member = (MemberExpression)u.Operand;
+                objectQuery = objectQuery.Where("It." + member.Member.Name + "=" + keyValues[i]);
                 i++;
             }
 
