@@ -37,11 +37,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="dcp.DDD.DomainModel.SuperTypes">
-      <HintPath>..\packages\dcp.DDD.DomainModel.1.0.2.0\lib\net45\dcp.DDD.DomainModel.SuperTypes.dll</HintPath>
+    <Reference Include="dcp.DDD.DomainModel.SuperTypes, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\dcp.DDD.DomainModel.1.0.3.0\lib\net45\dcp.DDD.DomainModel.SuperTypes.dll</HintPath>
     </Reference>
-    <Reference Include="dcp.DDD.Infrastructure.Data.EF.SuperTypes">
-      <HintPath>..\packages\dcp.DDD.DataInfrastructure.1.0.2.0\lib\net45\dcp.DDD.Infrastructure.Data.EF.SuperTypes.dll</HintPath>
+    <Reference Include="dcp.DDD.Infrastructure.Data.EF.SuperTypes, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\dcp.DDD.DataInfrastructure.1.0.3.0\lib\net45\dcp.DDD.Infrastructure.Data.EF.SuperTypes.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>

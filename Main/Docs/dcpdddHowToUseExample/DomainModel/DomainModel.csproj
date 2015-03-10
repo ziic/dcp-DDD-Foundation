@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="dcp.DDD.DomainModel.SuperTypes">
-      <HintPath>..\packages\dcp.DDD.DomainModel.1.0.2.0\lib\net45\dcp.DDD.DomainModel.SuperTypes.dll</HintPath>
+    <Reference Include="dcp.DDD.DomainModel.SuperTypes, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\dcp.DDD.DomainModel.1.0.3.0\lib\net45\dcp.DDD.DomainModel.SuperTypes.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -83,6 +84,7 @@
     <Compile Include="Territory.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="USAOrderSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Northwind.tt">

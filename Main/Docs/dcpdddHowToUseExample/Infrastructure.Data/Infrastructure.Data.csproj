@@ -31,17 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.0.0-ci1032\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper.Net4">
-      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    <Reference Include="dcp.DDD.DomainModel.SuperTypes, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\dcp.DDD.DomainModel.1.0.3.0\lib\net45\dcp.DDD.DomainModel.SuperTypes.dll</HintPath>
     </Reference>
-    <Reference Include="dcp.DDD.DomainModel.SuperTypes">
-      <HintPath>..\packages\dcp.DDD.DomainModel.1.0.2.0\lib\net45\dcp.DDD.DomainModel.SuperTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="dcp.DDD.Infrastructure.Data.EF.SuperTypes">
-      <HintPath>..\packages\dcp.DDD.DataInfrastructure.1.0.2.0\lib\net45\dcp.DDD.Infrastructure.Data.EF.SuperTypes.dll</HintPath>
+    <Reference Include="dcp.DDD.Infrastructure.Data.EF.SuperTypes, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\dcp.DDD.DataInfrastructure.1.0.3.0\lib\net45\dcp.DDD.Infrastructure.Data.EF.SuperTypes.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
