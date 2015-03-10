@@ -108,6 +108,21 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             throw new NotImplementedException();
         }
 
+        public TDomain Find(object keyValue, IEnumerable<Expression<Func<TDomain, object>>> includePaths)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TR Find<TR>(object[] keyValues, Expression<Func<TDomain, TR>> projection)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TR Find<TR>(object keyValue, Expression<Func<TDomain, TR>> projection)
+        {
+            throw new NotImplementedException();
+        }
+
         public TDomain Find(object keyValue, params Expression<Func<TDomain, object>>[] includePaths)
         {
             throw new NotImplementedException();

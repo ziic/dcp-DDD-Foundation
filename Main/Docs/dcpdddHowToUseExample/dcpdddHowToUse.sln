@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dcpdddHowToUse", "dcpdddHowToUse\dcpdddHowToUse.csproj", "{156D15FB-2467-4034-9616-5E9B135C0A75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{3035B494-BC3C-45DD-AB5D-4D588DFA27E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{C6C309DA-6753-4BBA-8EAE-B6BAE8DD7DE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{156D15FB-2467-4034-9616-5E9B135C0A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156D15FB-2467-4034-9616-5E9B135C0A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156D15FB-2467-4034-9616-5E9B135C0A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156D15FB-2467-4034-9616-5E9B135C0A75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3035B494-BC3C-45DD-AB5D-4D588DFA27E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3035B494-BC3C-45DD-AB5D-4D588DFA27E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3035B494-BC3C-45DD-AB5D-4D588DFA27E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3035B494-BC3C-45DD-AB5D-4D588DFA27E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C309DA-6753-4BBA-8EAE-B6BAE8DD7DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C309DA-6753-4BBA-8EAE-B6BAE8DD7DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C309DA-6753-4BBA-8EAE-B6BAE8DD7DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C309DA-6753-4BBA-8EAE-B6BAE8DD7DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

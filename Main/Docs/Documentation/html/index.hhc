@@ -1,0 +1,473 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Packages"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Packages"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp"><param name="Local" value="namespacedcp.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="DDD"><param name="Local" value="namespacedcp_1_1_d_d_d.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="DomainModel"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_domain_model.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SuperTypes"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types.html"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Infrastructure"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Data"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure_1_1_data.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="EF"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SuperTypes"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types.html"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            </UL>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Classes"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp"><param name="Local" value="namespacedcp.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="DDD"><param name="Local" value="namespacedcp_1_1_d_d_d.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="DomainModel"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_domain_model.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SuperTypes"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AndSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="AndSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html#aa094bee5155dbbfa40123c9e2c48f976"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html#aa617c67bbe7d37f1137b8dc15973ce66"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html#aa06f35a1c881b24154d8a9995b854a5a"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AssociationSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="AssociationSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html#a3d9213d2543972be6a46a66cbaec92dc"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="GetConcretePredicate"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html#ac294f4312007265f0a01b3036447d236"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html#a3beb0d8fd28614574c7c975c16bda97c"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CompositeSpecificationBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="CompositeSpecificationBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#a07f88569b17ac646e725fe2ba031991e"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#ad2a654da7300010361ab1100ac2e1644"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Left"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#abf19ecac43c82dbafc4723d99c5c7154"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Right"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#aeda7423ffcd207af9fec038f07d1a9d0"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IQueryCommand"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_query_command.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Predicate"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_query_command.html#a9907a81ee1c373e5575eb486437d984a"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IRepository"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Add"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#aae782ef057269436b459777fd464fb3b"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a8624dc61b82f012e0917c02e53e247b0"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a206fb5c28f2577af3c2629b9cc773c18"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#adf8e2a1e62a92197a4d443e5c93b9dfe"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#ad7e8c54194ce27c5cc51835afc67e778"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#ac4cd5a28730deb5f6ffe74d4a11f523f"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a227a18feb90936dbada9838886606886"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#aaa24f38e81e5268963784efcaeb43c49"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a0881d08a1cb56a76e4de3b98882ca50d"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#adb3c29459408a0de590126c4d16fcf29"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a63f0d629fc12d13fd193274e01a71dbf"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a0a7feef1a375b319ff1d5d289baf219a"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a09e44f30d47e4e5130cdb7518cbf5e3c"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#adfda08051b3943dd15427b9fcca2301c"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#acf99955d93f273738618b96d7152a1ed"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#aa627801121c4eab16d8535fe5750cd19"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a4fdcfcb8ea0701458b596c1d2b12e12b"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a9a551712063175c87990b22b76dbff6a"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#af4495084f9502bbed03645ed10e4754c"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a61760ce5acfcb87eca38584f74f23644"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a49e058ad9f5e2b66db7e38bf4c6cfd5d"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAll"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a04a7198fc0bf337bac9c6a4270cb674c"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="ISpecification"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html#afbd7daf1ceace97fba6fd04fb50da0b9"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html#a9ef196e0e092624dce674621ff3d23f0"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IUnitOfWork"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_unit_of_work.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Commit"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_unit_of_work.html#a06d1a039320f994f1c811a814613d80e"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="NegatedSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="NegatedSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#a7dbce7e2e0c81d5703776f3ef22ddc33"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#af3a428e08a47d897da98508c89701a8e"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Inner"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#a958288afcfb09ac7c1f36e4d1ec52c01"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#a42098540e59863a10b936a4c6ae2f743"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="OrSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="OrSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html#a9af2d6e1ea5817f192c61d1363ad5ec4"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html#a6b10c4a7dd3366d4e9529aabe21a9e5f"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html#a5e48647dabd2fe76d6ae7bac7cdb824a"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecificationBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#aae72386f5bb33898eceedfe82d9e37ea"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="CompiledExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#a793f36e555505cb595fd927c4822e72f"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="Predicate"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#ac03f25e385f2ec5e13736dac6b80355a"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#a3f486c0df63be3b8a6f211aefad625b3"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Infrastructure"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Data"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure_1_1_data.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="EF"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="SuperTypes"><param name="Local" value="namespacedcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="AdaptedRepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html"><param name="ImageNumber" value="1"></OBJECT>
+                  <UL>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="AdaptedRepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2d0da37bad501da8a25029a5758c30c0"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Add"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#aeb6f3e012b49525ecefc04b7b8a9957e"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#ac0803f44597cbffb62c6fd6cbc9a71c7"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a7274852a5fd48eff70cb89f31ce24030"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a9573dbbe7ec00fbc7aed4bdff389abed"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#adcfc44a29c956b9657cd42171e873e38"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a8c236aef6861be85936f0ecb9569138c"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2f892091336a24ac0f6542be9cfef8e9"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a06947374230172b8943b147d1f5623e0"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a92176d5ef6e652669e305e71bf06d474"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a9b32b02c9abe576c625f5da0a30e6aa4"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2ad33a402926dce2a02579b5aa95000e"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a3e3eb6985353a41860383b462b89ad17"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#ad8957af468749a52d6d9f31a61d12755"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a1a75a80815c2e1343ff8f1ae5aa805fe"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2b8c50f06b0e0fa95c264de93a9b243b"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a425df860e821ee44817032f8e0f78224"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a92b15ecfcd135991c60111bc8cd75299"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a03a34c36b583eba80e6e163e6762962f"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a76976606e3536d69182d8d732d2efa20"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a5d16c99ba818d52bb1e739dd622fadb0"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a299c02fc9a52ebede4663167cc2bc05f"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAll"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a9845245d050b611e72d4e3bf027b5874"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Context"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a0c895f29dcdb68ce682926deeba82c0a"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Set"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a5585b59d646de7c6c40d8ddeefa63440"><param name="ImageNumber" value="11"></OBJECT>
+                  </UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ReplaceTypeVisitor"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html"><param name="ImageNumber" value="1"></OBJECT>
+                  <UL>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="ReplaceTypeVisitor"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#af9df513b5a09c16037f9c817dbd93877"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Convert&lt; TFrom, TTo, TDest &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#a271b3f6eea6f316e7ede2c00e1b9efb4"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="VisitLambda&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#a547bb15308ee8f8533846e3d56441f57"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="VisitMember"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#a94797323918aa93838bf7e2341291ad7"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="VisitParameter"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#aad2e8cad1dc02450a0557c64ee111df6"><param name="ImageNumber" value="11"></OBJECT>
+                  </UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="RepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html"><param name="ImageNumber" value="1"></OBJECT>
+                  <UL>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="RepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a7d97c5b00baa87a7ac8698c69be46d80"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Add"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a06ee62cb09439f3ae22ca2b482e6e3b8"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a3f4f3180edb2d10025b33859d2aaa54a"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ac2dd336e915cc13db49091d35c4f6e2c"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#af5b051a9d52ded2d325c703a4c29c025"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a3e8288174555692a5742011b326051d1"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ad997f11f1556cf10871b8d9f5ff49abd"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a57acf3f01b08cde85ecb67824762ee87"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a48906e4c94a13f1452c1a5da7b3f5636"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a4c4ddbab7cc3f4f45ddc9c69a7cea5db"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a37779588d3d256b3b391779743cc4197"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a729c7d6c055caf2a025789864276539f"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a921df4d27d1d747c1a0ecdcb68b89617"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ac7bb53544c6e89cab42c0c44407dda7f"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a7fbd2bb29d1e614c97ea2947fbbc9e5f"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a3a566e76db65f526fcadca494dbf5aff"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a04a93edd8658b2e8c728d83a0be81aec"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a6997c55c572961d2b1785443e0478270"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ab42c90dddb1dda620b8bfeb90e6cadb8"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#aa3f2fecb14e20c10bbdc79efc2a9e467"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ad4e8e16452008ff545ac5af4bad964f9"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a7106bc9cf75e1691a8e45f605a7c0671"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAll"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a8770bb31c703a9cf33f0548a7ad3e6a1"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Context"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a025d114b8d05e515da0e9fc6257b9de6"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="ObjectContext"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a6dc869581e47fcd38069cb470a2ca38e"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="ObjectSet"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ad38d083dbcf815a442109802c927b809"><param name="ImageNumber" value="11"></OBJECT>
+                  <LI><OBJECT type="text/sitemap"><param name="Name" value="Set"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a9c7bbdfafdcfe7457ec65b50caaaa8e3"><param name="ImageNumber" value="11"></OBJECT>
+                  </UL>
+                </UL>
+              </UL>
+            </UL>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="ExpressionVisitor"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.Infrastructure.Data.EF.SuperTypes.ReplaceTypeVisitor"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IDisposable"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.IUnitOfWork"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_unit_of_work.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.IQueryCommand&lt; T &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_query_command.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.ISpecification&lt; T &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.SpecificationBase&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.AssociationSpecification&lt; TRelated, T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.CompositeSpecificationBase&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.AndSpecification&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.OrSpecification&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.NegatedSpecification&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.IRepository&lt; T &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.Infrastructure.Data.EF.SuperTypes.RepositoryBase&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.IRepository&lt; TDomain &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.Infrastructure.Data.EF.SuperTypes.AdaptedRepositoryBase&lt; TData, TDomain &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.DomainModel.SuperTypes.IRepository&lt; TRelated &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.Infrastructure.Data.EF.SuperTypes.RepositoryBase&lt; TData &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dcp.DDD.Infrastructure.Data.EF.SuperTypes.AdaptedRepositoryBase&lt; TData, TDomain &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Variables"><param name="Local" value="functions_vars.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Properties"><param name="Local" value="functions_prop.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Files"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Source"><param name="Local" value="dir_280f7020d51af5b0b986704cab8c18fd.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="DomainModel.SuperTypes"><param name="Local" value="dir_aade9726a70fb201c6030737f54ff38b.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="obj"><param name="Local" value="dir_102955c0ad267e8c076897fa3178d43c.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Debug"><param name="Local" value="dir_fb735fe9e86cfce1d103f95625d7af68.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs"><param name="Local" value="_domain_model_8_super_types_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs"><param name="Local" value="_domain_model_8_super_types_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs"><param name="Local" value="_domain_model_8_super_types_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Release"><param name="Local" value="dir_181d83b3a855e77ccdba92d2b2407b8e.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs"><param name="Local" value="_domain_model_8_super_types_2obj_2_release_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs"><param name="Local" value="_domain_model_8_super_types_2obj_2_release_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs"><param name="Local" value="_domain_model_8_super_types_2obj_2_release_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Properties"><param name="Local" value="dir_8801a72f83c2224d095c2ffc40df9aac.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AssemblyInfo.cs"><param name="Local" value="_domain_model_8_super_types_2_properties_2_assembly_info_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="IQueryCommand.cs"><param name="Local" value="_i_query_command_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="IQueryCommand"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_query_command.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Predicate"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_query_command.html#a9907a81ee1c373e5575eb486437d984a"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="IRepository.cs"><param name="Local" value="_i_repository_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="IRepository"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Add"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#aae782ef057269436b459777fd464fb3b"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a8624dc61b82f012e0917c02e53e247b0"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a206fb5c28f2577af3c2629b9cc773c18"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#adf8e2a1e62a92197a4d443e5c93b9dfe"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#ad7e8c54194ce27c5cc51835afc67e778"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#ac4cd5a28730deb5f6ffe74d4a11f523f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a227a18feb90936dbada9838886606886"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#aaa24f38e81e5268963784efcaeb43c49"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a0881d08a1cb56a76e4de3b98882ca50d"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#adb3c29459408a0de590126c4d16fcf29"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a63f0d629fc12d13fd193274e01a71dbf"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a0a7feef1a375b319ff1d5d289baf219a"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a09e44f30d47e4e5130cdb7518cbf5e3c"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#adfda08051b3943dd15427b9fcca2301c"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#acf99955d93f273738618b96d7152a1ed"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#aa627801121c4eab16d8535fe5750cd19"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a4fdcfcb8ea0701458b596c1d2b12e12b"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a9a551712063175c87990b22b76dbff6a"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#af4495084f9502bbed03645ed10e4754c"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a61760ce5acfcb87eca38584f74f23644"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a49e058ad9f5e2b66db7e38bf4c6cfd5d"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAll"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_repository.html#a04a7198fc0bf337bac9c6a4270cb674c"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="IUnitOfWork.cs"><param name="Local" value="_i_unit_of_work_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="IUnitOfWork"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_unit_of_work.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Commit"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_unit_of_work.html#a06d1a039320f994f1c811a814613d80e"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Specifications.cs"><param name="Local" value="_specifications_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="ISpecification"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html#afbd7daf1ceace97fba6fd04fb50da0b9"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="interfacedcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_i_specification.html#a9ef196e0e092624dce674621ff3d23f0"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecificationBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#aae72386f5bb33898eceedfe82d9e37ea"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CompiledExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#a793f36e555505cb595fd927c4822e72f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Predicate"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#ac03f25e385f2ec5e13736dac6b80355a"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_specification_base.html#a3f486c0df63be3b8a6f211aefad625b3"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CompositeSpecificationBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CompositeSpecificationBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#a07f88569b17ac646e725fe2ba031991e"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#ad2a654da7300010361ab1100ac2e1644"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Left"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#abf19ecac43c82dbafc4723d99c5c7154"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Right"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_composite_specification_base.html#aeda7423ffcd207af9fec038f07d1a9d0"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AndSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AndSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html#aa094bee5155dbbfa40123c9e2c48f976"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html#aa617c67bbe7d37f1137b8dc15973ce66"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_and_specification.html#aa06f35a1c881b24154d8a9995b854a5a"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="OrSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="OrSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html#a9af2d6e1ea5817f192c61d1363ad5ec4"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html#a6b10c4a7dd3366d4e9529aabe21a9e5f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_or_specification.html#a5e48647dabd2fe76d6ae7bac7cdb824a"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="NegatedSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="NegatedSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#a7dbce7e2e0c81d5703776f3ef22ddc33"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#af3a428e08a47d897da98508c89701a8e"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Inner"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#a958288afcfb09ac7c1f36e4d1ec52c01"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SpecExpression"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_negated_specification.html#a42098540e59863a10b936a4c6ae2f743"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AssociationSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AssociationSpecification"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html#a3d9213d2543972be6a46a66cbaec92dc"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="GetConcretePredicate"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html#ac294f4312007265f0a01b3036447d236"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="IsSatisfiedBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_domain_model_1_1_super_types_1_1_association_specification.html#a3beb0d8fd28614574c7c975c16bda97c"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Infrastructure.Data.EF.SuperTypes"><param name="Local" value="dir_7d701445e7ffd57073d108a6d230dec1.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="obj"><param name="Local" value="dir_de1b7395193ad29407c904f65f170517.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Debug"><param name="Local" value="dir_c365c1b4c23ae5281ff65fc45ae09a4b.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-21304e813846010d0b5bfba0d5b55e2b.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-7038021644c180c6bf75de703fc27805.html"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Release"><param name="Local" value="dir_23bdaad67192a093c62937eda05ae2b6.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2obj_2_release_2_temporary_generated_file__036_c0_b5_a913c2b159299e0e3b480a37f238cebc.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2obj_2_release_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2obj_2_release_2_temporary_generated_file___e7_a71_f716fc6f1c78d4c1d5f7b64ffa052d29b3.html"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Properties"><param name="Local" value="dir_44080e542a1095cdda8acc81574bfcfd.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AssemblyInfo.cs"><param name="Local" value="_infrastructure_8_data_8_e_f_8_super_types_2_properties_2_assembly_info_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="AdaptedRepositoryBase.cs"><param name="Local" value="_adapted_repository_base_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AdaptedRepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AdaptedRepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2d0da37bad501da8a25029a5758c30c0"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Add"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#aeb6f3e012b49525ecefc04b7b8a9957e"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#ac0803f44597cbffb62c6fd6cbc9a71c7"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a7274852a5fd48eff70cb89f31ce24030"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a9573dbbe7ec00fbc7aed4bdff389abed"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#adcfc44a29c956b9657cd42171e873e38"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a8c236aef6861be85936f0ecb9569138c"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2f892091336a24ac0f6542be9cfef8e9"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a06947374230172b8943b147d1f5623e0"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a92176d5ef6e652669e305e71bf06d474"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a9b32b02c9abe576c625f5da0a30e6aa4"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2ad33a402926dce2a02579b5aa95000e"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a3e3eb6985353a41860383b462b89ad17"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#ad8957af468749a52d6d9f31a61d12755"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a1a75a80815c2e1343ff8f1ae5aa805fe"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a2b8c50f06b0e0fa95c264de93a9b243b"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a425df860e821ee44817032f8e0f78224"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a92b15ecfcd135991c60111bc8cd75299"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a03a34c36b583eba80e6e163e6762962f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a76976606e3536d69182d8d732d2efa20"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a5d16c99ba818d52bb1e739dd622fadb0"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a299c02fc9a52ebede4663167cc2bc05f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAll"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a9845245d050b611e72d4e3bf027b5874"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Context"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a0c895f29dcdb68ce682926deeba82c0a"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Set"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_adapted_repository_base.html#a5585b59d646de7c6c40d8ddeefa63440"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ReplaceTypeVisitor.cs"><param name="Local" value="_replace_type_visitor_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="ReplaceTypeVisitor"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="ReplaceTypeVisitor"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#af9df513b5a09c16037f9c817dbd93877"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Convert&lt; TFrom, TTo, TDest &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#a271b3f6eea6f316e7ede2c00e1b9efb4"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="VisitLambda&lt; T &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#a547bb15308ee8f8533846e3d56441f57"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="VisitMember"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#a94797323918aa93838bf7e2341291ad7"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="VisitParameter"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_replace_type_visitor.html#aad2e8cad1dc02450a0557c64ee111df6"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="RepositoryBase.cs"><param name="Local" value="_repository_base_8cs.html"><param name="ImageNumber" value="11"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="RepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="RepositoryBase"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a7d97c5b00baa87a7ac8698c69be46d80"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Add"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a06ee62cb09439f3ae22ca2b482e6e3b8"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a3f4f3180edb2d10025b33859d2aaa54a"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="AnyBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ac2dd336e915cc13db49091d35c4f6e2c"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#af5b051a9d52ded2d325c703a4c29c025"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="CountBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a3e8288174555692a5742011b326051d1"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ad997f11f1556cf10871b8d9f5ff49abd"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a57acf3f01b08cde85ecb67824762ee87"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a48906e4c94a13f1452c1a5da7b3f5636"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a4c4ddbab7cc3f4f45ddc9c69a7cea5db"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a37779588d3d256b3b391779743cc4197"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a729c7d6c055caf2a025789864276539f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a921df4d27d1d747c1a0ecdcb68b89617"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Find&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ac7bb53544c6e89cab42c0c44407dda7f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a7fbd2bb29d1e614c97ea2947fbbc9e5f"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a3a566e76db65f526fcadca494dbf5aff"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a04a93edd8658b2e8c728d83a0be81aec"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a6997c55c572961d2b1785443e0478270"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ab42c90dddb1dda620b8bfeb90e6cadb8"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#aa3f2fecb14e20c10bbdc79efc2a9e467"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ad4e8e16452008ff545ac5af4bad964f9"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="FindBy&lt; TR &gt;"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a7106bc9cf75e1691a8e45f605a7c0671"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAll"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a8770bb31c703a9cf33f0548a7ad3e6a1"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Context"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a025d114b8d05e515da0e9fc6257b9de6"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="ObjectContext"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a6dc869581e47fcd38069cb470a2ca38e"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="ObjectSet"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#ad38d083dbcf815a442109802c927b809"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="Set"><param name="Local" value="classdcp_1_1_d_d_d_1_1_infrastructure_1_1_data_1_1_e_f_1_1_super_types_1_1_repository_base.html#a9c7bbdfafdcfe7457ec65b50caaaa8e3"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+</UL>
+</BODY>
+</HTML>

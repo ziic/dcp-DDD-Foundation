@@ -5,6 +5,9 @@ using System.Linq.Expressions;
 
 namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 {
+    /// <summary>
+    /// for internal using
+    /// </summary>
     public class ReplaceTypeVisitor : ExpressionVisitor
     {
         private readonly Dictionary<Type, Type> _mappings;

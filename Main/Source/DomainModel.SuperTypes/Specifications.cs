@@ -5,12 +5,29 @@ namespace dcp.DDD.DomainModel.SuperTypes
 {
     #region Queryable specifications
 
+    /// <summary>
+    /// Contract for Specificaation pattern
+    /// </summary>
+    /// <typeparam name="T">Entity</typeparam>
     public interface ISpecification<T> : IQueryCommand<T> where T : class
     {
+        /// <summary>
+        /// Check if entity is satisfied by specification
+        /// </summary>
+        /// <param name="obj">Entity</param>
+        /// <returns>Is satisfied</returns>
         bool IsSatisfiedBy(T obj);
+
+        /// <summary>
+        /// Predicate that should be satisfied by the entity 
+        /// </summary>
         Expression<Func<T, bool>> SpecExpression { get; }
     }
 
+    /// <summary>
+    /// Base type for implementing custom specification
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class SpecificationBase<T> : ISpecification<T> where T : class
     {
         private Func<T, bool> _compiledExpression;
