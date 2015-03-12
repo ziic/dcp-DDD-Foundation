@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Linq.Expressions;
 using AutoMapper;
@@ -68,6 +69,16 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             return Mapper.Map<TData, TDomain>(entityTd);
         }
 
+        public IEnumerable<TDomain> AddRange(IEnumerable<TDomain> entities)
+        {
+            var entitiesDM = Mapper.Map<IEnumerable<TDomain>, IEnumerable<TData>>(entities);
+            entitiesDM = AddRange(entitiesDM);
+
+            Mapper.Map(entitiesDM, entities);
+
+            return entities;
+        }
+
         public IEnumerable<TDomain> FindBy(Expression<Func<TDomain, bool>> predicate)
         {
             var predicateTData = _replaceTypeVisitor.Convert<TDomain, TData, bool>(predicate);
@@ -95,16 +106,42 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 
         public int CountBy(Expression<Func<TDomain, bool>> predicate)
         {
-            throw new NotImplementedException();
+            var predicateTData = _replaceTypeVisitor.Convert<TDomain, TData, bool>(predicate);
+
+            return CountBy(predicateTData);
         }
 
         public bool AnyBy(Expression<Func<TDomain, bool>> predicate)
         {
-            throw new NotImplementedException();
+            var predicateTData = _replaceTypeVisitor.Convert<TDomain, TData, bool>(predicate);
+
+            return AnyBy(predicateTData);
+        }
+
+        public TDomain Remove(TDomain entity)
+        {
+            var entityTd = Mapper.Map<TDomain, TData>(entity);
+            Set.Attach(entityTd);
+
+            entityTd = Set.Remove(entityTd);
+
+            Mapper.Map(entityTd, entity);
+
+            return entity;
+        }
+
+        public IEnumerable<TDomain> RemoveRange(IEnumerable<TDomain> entities)
+        {
+            foreach (var entity in entities)
+            {
+                Remove(entity);
+            }
+            return entities;
         }
 
         public TDomain Find(object[] keyValues, IEnumerable<Expression<Func<TDomain, object>>> includePaths)
         {
+            
             throw new NotImplementedException();
         }
 

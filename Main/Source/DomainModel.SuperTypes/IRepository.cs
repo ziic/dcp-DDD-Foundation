@@ -75,7 +75,6 @@ namespace dcp.DDD.DomainModel.SuperTypes
         /// <param name="projection">Factory of entity projection</param>
         /// <param name="includePaths">Paths of related entites</param>
         /// <returns>Entity projection</returns>
-        [Obsolete("Includes not working with projection")]
         TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
 
         /// <summary>
@@ -146,6 +145,13 @@ namespace dcp.DDD.DomainModel.SuperTypes
         T Add(T entity);
 
         /// <summary>
+        /// Add range of entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        /// <returns>Entities</returns>
+        IEnumerable<T> AddRange(IEnumerable<T> entities);
+
+        /// <summary>
         /// Finds entities satisfied with predicate
         /// </summary>
         /// <param name="predicate">Query predicate</param>
@@ -196,6 +202,42 @@ namespace dcp.DDD.DomainModel.SuperTypes
         /// <param name="predicate">Query predicate</param>
         /// <returns>Is Any</returns>
         bool AnyBy(Expression<Func<T, bool>> predicate);
-        
+
+        /// <summary>
+        /// Remove entity
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        /// <returns>Entity</returns>
+        T Remove(T entity);
+
+        /// <summary>
+        /// Remove entity by keyValues
+        /// </summary>
+        /// <param name="keyValues">Key values</param>
+        void Remove(params object[] keyValues);
+
+        /// <summary>
+        /// Remove range of entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        /// <returns>Entities</returns>
+        IEnumerable<T> RemoveRange(IEnumerable<T> entities);
+
+    }
+
+    public static class RepositoryExtenssions
+    {
+        /// <summary>
+        /// More useful method when eager loads several related entities
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="repository"></param>
+        /// <param name="keyValue"></param>
+        /// <param name="includePaths"></param>
+        /// <returns></returns>
+        public static T FindOnlyWithIncludes<T>(this IRepository<T> repository, object keyValue, params Expression<Func<T, object>>[] includePaths) where T : class
+        {
+            return repository.Find(keyValue, includePaths);
+        }
     }
 }

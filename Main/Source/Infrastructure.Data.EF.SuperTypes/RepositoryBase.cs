@@ -7,6 +7,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
 using dcp.DDD.DomainModel.SuperTypes;
+using System.Data.Entity.Core.Metadata.Edm;
 
 namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 {
@@ -33,7 +34,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             _keys = keys;
             Context = (DbContext)unitOfWork;
 
-            ObjectContext = ((IObjectContextAdapter) unitOfWork).ObjectContext;
+            ObjectContext = ((IObjectContextAdapter)unitOfWork).ObjectContext;
 
             Set = Context.Set<T>();
 
@@ -126,7 +127,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         /// <returns>Entity projection</returns>
         public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection)
         {
-            return Find(new[] {keyValue}, projection);
+            return Find(new[] { keyValue }, projection);
         }
 
         /// <summary>
@@ -148,9 +149,9 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 
             return materializedResult
                 .Where(x => x.Key == "Entity")
-                .Select(x => (T) x.Value)
+                .Select(x => (T)x.Value)
                 .Select(projection.Compile()).SingleOrDefault();
-            
+
         }
 
         /// <summary>
@@ -163,7 +164,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         /// <returns>Entity projection</returns>
         public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths)
         {
-            return Find(new[] {keyValue}, projection, includePaths.AsEnumerable());
+            return Find(new[] { keyValue }, projection, includePaths.AsEnumerable());
         }
 
         /// <summary>
@@ -257,6 +258,60 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         }
 
         /// <summary>
+        /// Remove entity
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        /// <returns>Entity</returns>
+        public T Remove(T entity)
+        {
+            return Set.Remove(entity);
+        }
+
+        /// <summary>
+        /// Remove entity by keyValues
+        /// </summary>
+        /// <param name="keyValues">Key values</param>
+        public void Remove(params object[] keyValues)
+        {
+            var item = Set.Create();
+            var itemType = typeof(T);
+            
+            var entityContainer = ObjectContext.MetadataWorkspace.GetEntityContainer(ObjectContext.DefaultContainerName, DataSpace.CSpace);
+            var entitySetName = entityContainer.BaseEntitySets.First(b => b.ElementType.Name == itemType.Name).Name;
+            
+            var entityKey = ObjectContext.CreateEntityKey(entitySetName, item);
+            var i = 0;
+            foreach (var key in entityKey.EntityKeyValues)
+            {
+                itemType.GetProperty(key.Key).SetValue(item, keyValues[i], null);
+                i++;
+            }
+            
+            Set.Attach(item);
+            ObjectContext.ObjectStateManager.ChangeObjectState(item, EntityState.Deleted);
+        }
+
+        /// <summary>
+        /// Remove range of entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        /// <returns>Entities</returns>
+        public IEnumerable<T> RemoveRange(IEnumerable<T> entities)
+        {
+            return Set.RemoveRange(entities);
+        }
+
+        /// <summary>
+        /// Add range of entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        /// <returns>Entities</returns>
+        public IEnumerable<T> AddRange(IEnumerable<T> entities)
+        {
+            return Set.AddRange(entities);
+        }
+
+        /// <summary>
         /// Finds entities satisfied with predicate
         /// </summary>
         /// <param name="predicate">Query predicate</param>
@@ -298,7 +353,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             var results = materializedResults
                 .Select(materializedResult => materializedResult
                     .Where(x => x.Key == "Entity")
-                    .Select(x => (T) x.Value)
+                    .Select(x => (T)x.Value)
                     .Select(projection.Compile())
                     .SingleOrDefault())
                 .ToList();
@@ -335,7 +390,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
     {
         public static ObjectQuery<T> IncludeToQuery<T>(this ObjectQuery<T> query, IEnumerable<Expression<Func<T, object>>> includePaths)
         {
-            return includePaths.Aggregate(query, (current, path) => (ObjectQuery<T>) current.Include(path));
+            return includePaths.Aggregate(query, (current, path) => (ObjectQuery<T>)current.Include(path));
         }
 
         public static IQueryable<T> IncludeToQuery<T>(this IQueryable<T> query, IEnumerable<Expression<Func<T, object>>> includePaths)
@@ -348,7 +403,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             var i = 0;
             foreach (var key in keys)
             {
-                if (key.Body.NodeType != ExpressionType.Convert) 
+                if (key.Body.NodeType != ExpressionType.Convert)
                     throw new ArgumentException("Entity keys are incorrect");
 
                 var u = (UnaryExpression)key.Body;
@@ -384,25 +439,11 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             return Expression.Lambda<Func<T, Dictionary<string, object>>>(
                 selector, itemParam);
 
-        }        
-    }
-
-    
-
-    public static class RepositoryExtenssions
-    {
-        /// <summary>
-        /// More useful method when eager loads several related entities
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="repository"></param>
-        /// <param name="keyValue"></param>
-        /// <param name="includePaths"></param>
-        /// <returns></returns>
-        public static T FindOnlyWithIncludes<T>(this IRepository<T> repository, object keyValue, params Expression<Func<T, object>>[] includePaths) where T : class
-        {
-            return repository.Find(keyValue, includePaths);
         }
     }
-   
+
+
+
+
+
 }

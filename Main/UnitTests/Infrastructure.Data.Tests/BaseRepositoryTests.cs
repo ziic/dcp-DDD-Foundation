@@ -10,7 +10,7 @@ using System.Text;
 namespace Infrastructure.Data.Tests
 {
     [TestClass]
-    public class BaseRepositoryTests
+    public class RepositoryBaseTests
     {
         [TestMethod]
         public void FindSingleResult()
@@ -302,6 +302,19 @@ namespace Infrastructure.Data.Tests
                 var res = orderRepository.AnyBy(x => x.ShipCountry == "USA");
 
                 Assert.IsTrue(res);
+            }
+        }
+
+        [TestMethod]
+        public void RemoveByKey()
+        {
+            using (var context = new NorthwindEntities())
+            {
+                context.Configuration.LazyLoadingEnabled = false;
+
+                var orderRepository = new OrderRepository(context);
+
+                orderRepository.Remove(10248);
             }
         }
     }
