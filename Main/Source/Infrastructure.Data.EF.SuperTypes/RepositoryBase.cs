@@ -408,7 +408,9 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 
                 var u = (UnaryExpression)key.Body;
                 var member = (MemberExpression)u.Operand;
-                objectQuery = objectQuery.Where("It." + member.Member.Name + "=" + keyValues[i]);
+                objectQuery = objectQuery.Where("It." + member.Member.Name + "=@Key" + i);
+                objectQuery.Parameters.Add(new ObjectParameter("Key" + i, keyValues[i]));
+
                 i++;
             }
 

@@ -20,6 +20,7 @@ namespace Infrastructure.Data.Tests
                 context.Configuration.LazyLoadingEnabled = false;
 
                 var orderRepository = new OrderRepository(context);
+                
                 var order = orderRepository.Find(10248);
 
                 Assert.IsNotNull(order);
