@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Linq.Expressions;
 using AutoMapper;
+using AutoMapper.Configuration;
 using dcp.DDD.DomainModel.SuperTypes;
 
 namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
@@ -16,6 +16,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         protected new readonly DbContext Context;
         protected new readonly DbSet<TData> Set;
         private readonly ReplaceTypeVisitor _replaceTypeVisitor;
+        private readonly IMapper _mapper;
 
         protected AdaptedRepositoryBase(IUnitOfWork unitOfWork, Dictionary<Type, Type> typesMappings, IEnumerable<Expression<Func<TData, object>>> keys) 
             : base(unitOfWork, keys.ToArray())
@@ -26,28 +27,32 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             
             Set = Context.Set<TData>();
 
+            var configurationExpression = new MapperConfigurationExpression();
+            
             foreach (var typesMapping in typesMappings)
             {
-                Mapper.CreateMap(typesMapping.Key, typesMapping.Value);
+                configurationExpression.CreateMap(typesMapping.Key, typesMapping.Value);
             }
-            
+            var config = new MapperConfiguration(configurationExpression);
+            _mapper = config.CreateMapper();
+
         }
 
         public new IEnumerable<TDomain> GetAll()
         {
-            return Mapper.Map<IEnumerable<TData>, IEnumerable<TDomain>>(base.GetAll());
+            return _mapper.Map<IEnumerable<TData>, IEnumerable<TDomain>>(base.GetAll());
         }
 
         public new virtual TDomain Find(params object[] keyValues)
         {
-            return Mapper.Map<TData, TDomain>(base.Find(keyValues));
+            return _mapper.Map<TData, TDomain>(base.Find(keyValues));
         }
 
         public IEnumerable<TDomain> FindBy(IQueryCommand<TDomain> queryObject)
         {
             var predicateTData = _replaceTypeVisitor.Convert<TDomain, TData, bool>(queryObject.Predicate);
 
-            return Mapper.Map<IEnumerable<TData>, IEnumerable<TDomain>>(FindBy(predicateTData));
+            return _mapper.Map<IEnumerable<TData>, IEnumerable<TDomain>>(FindBy(predicateTData));
         }
 
         public int CountBy(IQueryCommand<TDomain> queryObject)
@@ -66,15 +71,15 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         {
             var entityTd = Add(Mapper.Map<TDomain, TData>(entity));
 
-            return Mapper.Map<TData, TDomain>(entityTd);
+            return _mapper.Map<TData, TDomain>(entityTd);
         }
 
         public IEnumerable<TDomain> AddRange(IEnumerable<TDomain> entities)
         {
-            var entitiesDM = Mapper.Map<IEnumerable<TDomain>, IEnumerable<TData>>(entities);
+            var entitiesDM = _mapper.Map<IEnumerable<TDomain>, IEnumerable<TData>>(entities);
             entitiesDM = AddRange(entitiesDM);
 
-            Mapper.Map(entitiesDM, entities);
+            _mapper.Map(entitiesDM, entities);
 
             return entities;
         }
@@ -83,7 +88,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         {
             var predicateTData = _replaceTypeVisitor.Convert<TDomain, TData, bool>(predicate);
 
-            return Mapper.Map<IEnumerable<TData>, IEnumerable<TDomain>>(FindBy(predicateTData));
+            return _mapper.Map<IEnumerable<TData>, IEnumerable<TDomain>>(FindBy(predicateTData));
         }
 
         public IEnumerable<TR> FindBy<TR>(Expression<Func<TDomain, bool>> predicate, Expression<Func<TDomain, TR>> projection)
@@ -125,7 +130,7 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 
             entityTd = Set.Remove(entityTd);
 
-            Mapper.Map(entityTd, entity);
+            _mapper.Map(entityTd, entity);
 
             return entity;
         }

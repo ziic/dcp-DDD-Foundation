@@ -1,0 +1,1 @@
+NuGet.exe pack Infrastructure.Data.EF.SuperTypes.csproj -IncludeReferencedProjects -properties Configuration=Release

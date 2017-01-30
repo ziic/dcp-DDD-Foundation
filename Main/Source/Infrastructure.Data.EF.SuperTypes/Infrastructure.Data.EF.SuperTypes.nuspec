@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>dcp.DDD.DataInfrastructure</id>
+    <version>$version$</version>
+    <title>dcp DDD Infrastructure Data</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>    
+    <copyright>$copyright$</copyright>
+    <tags>DDD, data, infrastructure</tags>
+    <releaseNotes>Upgraded to .net 4.6.2, upgraded packages dependencies</releaseNotes>
+  </metadata>
+</package>

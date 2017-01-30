@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>dcp.DDD.DomainModel</id>
+    <version>$version$</version>
+    <title>dcp DDD Domain Model</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>    
+    <copyright>$copyright$</copyright>
+    <tags>DDD, domain</tags>
+    <releaseNotes>Upgrade to .net 4.6.2</releaseNotes>
+  </metadata>
+</package>

@@ -1,0 +1,1 @@
+NuGet.exe pack DomainModel.SuperTypes.csproj -IncludeReferencedProjects -properties Configuration=Release
