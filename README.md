@@ -10,7 +10,7 @@ Infrastructure Data layer supports Entity Framework.
 # Overview
 DDD approach assumes that you separate your types into several layers: UI, Application, Domain, Infrastructure for data persistence and other. You can learn more details using the following link: [http://blogs.msdn.com/b/marblogging/archive/2011/05/23/domain-drive-design-n-layered-net-4-0-architecture-guide.aspx](http://blogs.msdn.com/b/marblogging/archive/2011/05/23/domain-drive-design-n-layered-net-4-0-architecture-guide.aspx).
  
-![](/Docs/images/Home_scheme1.PNG)
+![](/docs/images/Home_scheme1.PNG)
 
 The project consists of two libraries (_dcp.DDD.DomainModel.SuperTypes.dll, dcp.DDD.Infrastructure.Data.EF.SuperTypes.dll_) and, as you can see in **figure 1**, covers two main blocks: 
 * Bases (SuperTypes) of Domain Model Layer;
