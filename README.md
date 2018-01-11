@@ -22,14 +22,14 @@ Domain Model Layer block contains:
 * _IUnitOfWork_ contract that covers "unit of work" pattern;
 * _Specification_ base types. Learn more on [http://en.wikipedia.org/wiki/Specification_pattern](http://en.wikipedia.org/wiki/Specification_pattern). Repository can query entities satisfied by specification.
 Infrastructure Layer for Data Persistence block contains:
-* Abstract _RepositoryBase_ base type that implements all necessary general things, and relied on **EntityFramework** ([https://entityframework.codeplex.com](https://entityframework.codeplex.com));
+* Abstract _RepositoryBase_ base type that implements all necessary general things, and relied on **EntityFramework** ([https://github.com/aspnet/EntityFramework6](https://github.com/aspnet/EntityFramework6));
 * _AdaptedRepositoryBase_ **(not completed)** base repository type that may be useful when your data model and domain model are different. It uses **AutoMapper** ([http://automapper.org](http://automapper.org)) to transparently map a domain entity to a data entity.
 
 # Installation
 
 There are two ways to install.
 
-Download a zip-archive with dll-files manually from [https://dcpddd.codeplex.com/releases/](https://dcpddd.codeplex.com/releases/)
+Download a zip-archive with dll-files manually from [https://github.com/ziic/dcp-DDD-Foundation/releases](https://github.com/ziic/dcp-DDD-Foundation/releases)
 
 As NuGet packages:
 * [https://www.nuget.org/packages/dcp.DDD.DomainModel](https://www.nuget.org/packages/dcp.DDD.DomainModel)
@@ -37,11 +37,11 @@ As NuGet packages:
 
 # How To use
 
-[How to use example](How-to-use-example)
+See wiki [https://github.com/ziic/dcp-DDD-Foundation/wiki](https://github.com/ziic/dcp-DDD-Foundation/wiki)
 
 # Documentation
 
-You can download documentation here: [https://dcpddd.codeplex.com/downloads/get/1437394](https://dcpddd.codeplex.com/downloads/get/1437394).
+You can download documentation from releases page: [https://github.com/ziic/dcp-DDD-Foundation/releases](https://github.com/ziic/dcp-DDD-Foundation/releases).
 
 
 
