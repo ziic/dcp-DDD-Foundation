@@ -10,21 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data.Tests", "UnitTests\Infrastructure.Data.Tests\Infrastructure.Data.Tests.csproj", "{BD9C2060-D5E6-418A-A9EC-85CC666DF720}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Source\\DomainModel.SuperTypes\\DomainModel.SuperTypes.csproj
-		SccProjectName1 = Source/DomainModel.SuperTypes
-		SccLocalPath1 = Source\\DomainModel.SuperTypes
-		SccProjectUniqueName2 = Source\\Infrastructure.Data.EF.SuperTypes\\Infrastructure.Data.EF.SuperTypes.csproj
-		SccProjectName2 = Source/Infrastructure.Data.EF.SuperTypes
-		SccLocalPath2 = Source\\Infrastructure.Data.EF.SuperTypes
-		SccProjectUniqueName3 = UnitTests\\Infrastructure.Data.Tests\\Infrastructure.Data.Tests.csproj
-		SccProjectName3 = UnitTests/Infrastructure.Data.Tests
-		SccLocalPath3 = UnitTests\\Infrastructure.Data.Tests
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
