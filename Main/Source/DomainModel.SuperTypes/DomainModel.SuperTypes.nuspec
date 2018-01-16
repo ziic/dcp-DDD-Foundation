@@ -10,6 +10,7 @@
     <description>$description$</description>    
     <copyright>$copyright$</copyright>
     <tags>DDD, domain</tags>
+    <projectUrl>https://github.com/ziic/dcp-DDD-Foundation</projectUrl>
     <releaseNotes>Async operations, remove automapper dependency</releaseNotes>
   </metadata>
 </package>

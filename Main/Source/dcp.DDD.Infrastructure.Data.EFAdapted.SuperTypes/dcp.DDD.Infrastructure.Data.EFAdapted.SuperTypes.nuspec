@@ -10,6 +10,7 @@
     <description>$description$</description>    
     <copyright>$copyright$</copyright>
     <tags>DDD, data, infrastructure</tags>
+    <projectUrl>https://github.com/ziic/dcp-DDD-Foundation</projectUrl>
     <releaseNotes>Transform domain entities using automapper</releaseNotes>
   </metadata>
 </package>
