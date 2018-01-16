@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
-using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
 using dcp.DDD.DomainModel.SuperTypes;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Reflection;
+using System.Threading.Tasks;
 
 namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
 {
     /// <summary>
     /// Base repository (Entity Framework)
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public abstract class RepositoryBase<T> : IRepository<T>
+    /// <typeparam name="T">Entity type</typeparam>
+    public abstract class RepositoryBase<T> : IRepository<T>, IAsyncRepository<T>
         where T : class
     {
         private readonly IEnumerable<Expression<Func<T, object>>> _keys;
@@ -41,31 +42,27 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             ObjectSet = ObjectContext.CreateObjectSet<T>();
         }
 
-        /// <summary>
-        /// Returns all entites
-        /// </summary>
-        /// <returns>Entities</returns>
+        #region IRepository
+
+        /// <inheritdoc />
         public IEnumerable<T> GetAll()
         {
             return Set.ToList();
         }
 
-        /// <summary>
-        /// Finds single entity by key values
-        /// </summary>
-        /// <param name="keyValues">Key values</param>
-        /// <returns>Entity</returns>
+        /// <inheritdoc />
         public virtual T Find(params object[] keyValues)
         {
             return Set.Find(keyValues);
         }
 
-        /// <summary>
-        /// Finds single entity by key values, eager loads related entities
-        /// </summary>
-        /// <param name="keyValues">Key values</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity</returns>
+        /// <inheritdoc />
+        public T Find(object keyValue, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            return Find(new[] { keyValue }, includePaths);
+        }
+
+        /// <inheritdoc />
         public T Find(object[] keyValues, IEnumerable<Expression<Func<T, object>>> includePaths)
         {
             ObjectQuery<T> objectQuery = ObjectSet;
@@ -76,38 +73,13 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
                 .SingleOrDefault();
         }
 
-        /// <summary>
-        /// Finds single entity by key value, eager loads related entities
-        /// </summary>
-        /// <param name="keyValue">Key value</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity</returns>
-        public T Find(object keyValue, IEnumerable<Expression<Func<T, object>>> includePaths)
+        /// <inheritdoc />
+        public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection)
         {
-            return Find(new[] { keyValue }, includePaths);
+            return Find(new[] { keyValue }, projection);
         }
 
-        /// <summary>
-        /// Finds single entity by key values, eager loads related entities
-        /// </summary>
-        /// <remarks>
-        /// Use only when single include path
-        /// </remarks>
-        /// <param name="keyValue">Key values</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity</returns>
-        public T Find(object keyValue, params Expression<Func<T, object>>[] includePaths)
-        {
-            return Find(new[] { keyValue }, includePaths.AsEnumerable());
-        }
-
-        /// <summary>
-        /// Finds single entity by key values and retutns entity projection
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="keyValues">Key values</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <returns>Entity projection</returns>
+        /// <inheritdoc />
         public TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection)
         {
             ObjectQuery<T> objectQuery = ObjectSet;
@@ -118,60 +90,66 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
                 .SingleOrDefault();
         }
 
-        /// <summary>
-        /// Finds single entity by key value and returns entity projection
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="keyValue">Key value</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <returns>Entity projection</returns>
-        public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection)
+        /// <inheritdoc />
+        public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
         {
-            return Find(new[] { keyValue }, projection);
+            return Find(new[] { keyValue }, projection, includePathsFactory);
         }
 
-        /// <summary>
-        /// Finds single entity by key values, eager loads related entities and returns entity projection
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="keyValues">Key values</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity projection</returns>
-        public TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
+        /// <inheritdoc />
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
+        public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
         {
-            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludes(includePaths);
+            return Find(new[] { keyValue }, projection, includePaths);
+        }
+
+        /// <inheritdoc />
+        public TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            var includePaths = ExpressionHelper.ToStringsIncludePaths(includePathsFactory);
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludesAsAnonymous(projection, includePathsFactory);
 
             var materializedResult = ObjectSet
                 .IncludeToQuery(includePaths)
+                .FilterQueryByKeys(_keys, keyValues)
+                .Select(projectionWithIncludes).SingleOrDefault();
+
+            if (materializedResult == null)
+                return default(TR);
+
+            return materializedResult.Data;
+        }
+
+        /// <inheritdoc />
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
+        public TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            var includePathsArray = includePaths as Expression<Func<T, object>>[] ?? includePaths.ToArray();
+            //improve performance when there is only one include
+            if (includePathsArray.Length == 1)
+            {
+                return Find(keyValues, projection, includePathsArray.First());
+            }
+
+            //eager works only when "include" in "projection"
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludes(includePathsArray);
+
+            //TODO: not good performance as projection is not in SQL
+            var materializedResult = ObjectSet
+                .IncludeToQuery(includePathsArray)
                 .FilterQueryByKeys(_keys, keyValues).AsEnumerable()
                 .Select(projectionWithIncludes.Compile()).SingleOrDefault();
+
+            if (materializedResult == null)
+                return default(TR);
 
             return materializedResult
                 .Where(x => x.Key == "Entity")
                 .Select(x => (T)x.Value)
                 .Select(projection.Compile()).SingleOrDefault();
-
         }
 
-        /// <summary>
-        /// Finds single entity by single key value, eager loads related entities and returns enity projection
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="keyValue">Key value</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity projection</returns>
-        public TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths)
-        {
-            return Find(new[] { keyValue }, projection, includePaths.AsEnumerable());
-        }
-
-        /// <summary>
-        /// Finds entities satisfied with query command
-        /// </summary>
-        /// <param name="queryObject">Query command</param>
-        /// <returns>Entites</returns>
+        /// <inheritdoc />
         public IEnumerable<T> FindBy(IQueryCommand<T> queryObject)
         {
             return Set
@@ -179,174 +157,80 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
                 .ToList();
         }
 
-        /// <summary>
-        /// Finds entities satisfied with predicate
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="queryObject">Query command</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <returns>Entity projections</returns>
+        /// <inheritdoc />
         public IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection)
         {
             return FindBy(queryObject.Predicate, projection);
         }
 
-        /// <summary>
-        /// Finds entities satisfied with query command, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="queryObject">Query command</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity projections</returns>
+        /// <inheritdoc />
+        public IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            return FindBy(queryObject.Predicate, projection, includePathsFactory);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
         public IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
         {
             return FindBy(queryObject.Predicate, projection, includePaths);
         }
 
-        /// <summary>
-        /// Finds entities satisfied with query command, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="queryObject">Query command</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity projections</returns>
-        public IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths)
-        {
-            return FindBy(queryObject, projection, includePaths.AsEnumerable());
-        }
-
-        /// <summary>
-        /// Gets count of entities satisfied with query command
-        /// </summary>
-        /// <param name="queryObject">Query command</param>
-        /// <returns>Count</returns>
+        /// <inheritdoc />
         public int CountBy(IQueryCommand<T> queryObject)
         {
             return Set.Count(queryObject.Predicate);
         }
 
-        /// <summary>
-        /// Checks if elements satisfied with query are exists
-        /// </summary>
-        /// <param name="queryObject">Query</param>
-        /// <returns>Is any</returns>
+        /// <inheritdoc />
         public bool AnyBy(IQueryCommand<T> queryObject)
         {
             return Set.Any(queryObject.Predicate);
         }
 
-        /// <summary>
-        /// Gets count of entities satisfied with query predicate
-        /// </summary>
-        /// <param name="predicate">Query predicate</param>
-        /// <returns>Count</returns>
-        public int CountBy(Expression<Func<T, bool>> predicate)
-        {
-            return Set.Count(predicate);
-        }
-
-        /// <summary>
-        /// Checks if entites satisfied with query predicate are exists
-        /// </summary>
-        /// <param name="predicate">Query predicate</param>
-        /// <returns>Is Any</returns>
-        public bool AnyBy(Expression<Func<T, bool>> predicate)
-        {
-            return Set.Any(predicate);
-        }
-
-        /// <summary>
-        /// Remove entity
-        /// </summary>
-        /// <param name="entity">Entity</param>
-        /// <returns>Entity</returns>
-        public T Remove(T entity)
-        {
-            return Set.Remove(entity);
-        }
-
-        /// <summary>
-        /// Remove entity by keyValues
-        /// </summary>
-        /// <param name="keyValues">Key values</param>
-        public void Remove(params object[] keyValues)
-        {
-            var item = Set.Create();
-            var itemType = typeof(T);
-            
-            var entityContainer = ObjectContext.MetadataWorkspace.GetEntityContainer(ObjectContext.DefaultContainerName, DataSpace.CSpace);
-            var entitySetName = entityContainer.BaseEntitySets.First(b => b.ElementType.Name == itemType.Name).Name;
-            
-            var entityKey = ObjectContext.CreateEntityKey(entitySetName, item);
-            var i = 0;
-            foreach (var key in entityKey.EntityKeyValues)
-            {
-                itemType.GetProperty(key.Key).SetValue(item, keyValues[i], null);
-                i++;
-            }
-            
-            Set.Attach(item);
-            ObjectContext.ObjectStateManager.ChangeObjectState(item, EntityState.Deleted);
-        }
-
-        /// <summary>
-        /// Remove range of entities
-        /// </summary>
-        /// <param name="entities">Entities</param>
-        /// <returns>Entities</returns>
-        public IEnumerable<T> RemoveRange(IEnumerable<T> entities)
-        {
-            return Set.RemoveRange(entities);
-        }
-
-        /// <summary>
-        /// Add range of entities
-        /// </summary>
-        /// <param name="entities">Entities</param>
-        /// <returns>Entities</returns>
-        public IEnumerable<T> AddRange(IEnumerable<T> entities)
-        {
-            return Set.AddRange(entities);
-        }
-
-        /// <summary>
-        /// Finds entities satisfied with predicate
-        /// </summary>
-        /// <param name="predicate">Query predicate</param>
-        /// <returns>Entites</returns>
+        /// <inheritdoc />
         public IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)
         {
             return Set.Where(predicate).ToList();
         }
 
-        /// <summary>
-        /// Finds entities satisfied with predicate
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="predicate">Query predicate</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <returns>Entites projetions</returns>
+        /// <inheritdoc/>
         public IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection)
         {
             return Set.Where(predicate).Select(projection).ToList();
         }
 
-        /// <summary>
-        /// Finds entities satisfied with predicate, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="predicate">Query predicate</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entites projetions</returns>
+        /// <inheritdoc/>
+        public IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            var includePaths = ExpressionHelper.ToStringsIncludePaths(includePathsFactory);
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludesAsAnonymous(projection, includePathsFactory);
+
+            var materializedResult = ObjectSet
+                .IncludeToQuery(includePaths)
+                .Where(predicate)
+                .Select(projectionWithIncludes).ToList();
+            
+            return materializedResult.Select(x => x.Data).ToList();
+        }
+
+        /// <inheritdoc/>
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
         public IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
         {
-            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludes(includePaths);
+            var includePathsArray = includePaths as Expression<Func<T, object>>[] ?? includePaths.ToArray();
+            //improve performance when there is only one include
+            if (includePathsArray.Length == 1)
+            {
+                return FindBy(predicate, projection, includePathsArray.First());
+            }
 
+            //eager works only when "include" in "projection"
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludes(includePathsArray);
+
+            //TODO: not good performance as projection is not in SQL
             var materializedResults = ObjectSet
-                .IncludeToQuery(includePaths)
+                .IncludeToQuery(includePathsArray)
                 .Where(predicate).AsEnumerable()
                 .Select(projectionWithIncludes.Compile()).ToList();
 
@@ -361,29 +245,288 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             return results;
         }
 
-        /// <summary>
-        /// Finds entities satisfied with predicate, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="predicate">Query predicate</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entites projetions</returns>
-        public IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection,
-            params Expression<Func<T, object>>[] includePaths)
+        /// <inheritdoc />
+        public int CountBy(Expression<Func<T, bool>> predicate)
         {
-            return FindBy(predicate, projection, includePaths.AsEnumerable());
+            return Set.Count(predicate);
         }
 
-        /// <summary>
-        /// Adds entity to repository
-        /// </summary>
-        /// <param name="entity">Entity</param>
-        /// <returns>Entity</returns>
+        /// <inheritdoc />
+        public bool AnyBy(Expression<Func<T, bool>> predicate)
+        {
+            return Set.Any(predicate);
+        }
+
+        /// <inheritdoc/>
         public T Add(T entity)
         {
             return Set.Add(entity);
         }
+
+        /// <inheritdoc />
+        public IEnumerable<T> AddRange(IEnumerable<T> entities)
+        {
+            return Set.AddRange(entities);
+        }
+
+        /// <inheritdoc />
+        public T Remove(T entity)
+        {
+            return Set.Remove(entity);
+        }
+
+        /// <inheritdoc />
+        public void Remove(params object[] keyValues)
+        {
+            var item = Set.Create();
+            var itemType = typeof(T);
+
+            var entityContainer = ObjectContext.MetadataWorkspace.GetEntityContainer(ObjectContext.DefaultContainerName, DataSpace.CSpace);
+            var entitySetName = entityContainer.BaseEntitySets.First(b => b.ElementType.Name == itemType.Name).Name;
+
+            var entityKey = ObjectContext.CreateEntityKey(entitySetName, item);
+            var i = 0;
+            foreach (var key in entityKey.EntityKeyValues)
+            {
+                itemType.GetProperty(key.Key).SetValue(item, keyValues[i], null);
+                i++;
+            }
+
+            Set.Attach(item);
+            ObjectContext.ObjectStateManager.ChangeObjectState(item, EntityState.Deleted);
+        }
+
+        /// <inheritdoc />
+        public IEnumerable<T> RemoveRange(IEnumerable<T> entities)
+        {
+            return Set.RemoveRange(entities);
+        }
+
+        #endregion
+
+        #region IAsyncRepository
+
+        /// <inheritdoc />
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await Set.ToListAsync();
+        }
+
+        /// <inheritdoc />
+        public Task<T> FindAsync(params object[] keyValues)
+        {
+            return Set.FindAsync(keyValues);
+        }
+       
+        /// <inheritdoc />
+        public Task<T> FindAsync(object keyValue, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            return FindAsync(new[] { keyValue }, includePaths);
+        }
+
+        /// <inheritdoc />
+        public Task<T> FindAsync(object[] keyValues, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            ObjectQuery<T> objectQuery = ObjectSet;
+
+            return objectQuery
+                .IncludeToQuery(includePaths)
+                .FilterQueryByKeys(_keys, keyValues)
+                .SingleOrDefaultAsync();
+        }
+
+        /// <inheritdoc />
+        public Task<TR> FindAsync<TR>(object keyValue, Expression<Func<T, TR>> projection)
+        {
+            return FindAsync(new[] { keyValue }, projection);
+        }
+
+        /// <inheritdoc />
+        public Task<TR> FindAsync<TR>(object[] keyValues, Expression<Func<T, TR>> projection)
+        {
+            ObjectQuery<T> objectQuery = ObjectSet;
+
+            return objectQuery
+                .FilterQueryByKeys(_keys, keyValues)
+                .Select(projection)
+                .SingleOrDefaultAsync();
+        }
+
+        /// <inheritdoc />
+        public Task<TR> FindAsync<TR>(object keyValue, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            return FindAsync(new[] { keyValue }, projection, includePathsFactory);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
+        public Task<TR> FindAsync<TR>(object keyValue, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            return FindAsync(new[] { keyValue }, projection, includePaths);
+        }
+
+        /// <inheritdoc />
+        public async Task<TR> FindAsync<TR>(object[] keyValues, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            var includePaths = ExpressionHelper.ToStringsIncludePaths(includePathsFactory);
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludesAsAnonymous(projection, includePathsFactory);
+
+            var materializedResult = await ObjectSet
+                .IncludeToQuery(includePaths)
+                .FilterQueryByKeys(_keys, keyValues)
+                .Select(projectionWithIncludes).SingleOrDefaultAsync();
+
+            if (materializedResult == null)
+                return default(TR);
+
+            return materializedResult.Data;
+        }
+        
+
+        /// <inheritdoc />
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
+        public async Task<TR> FindAsync<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            var includePathsArray = includePaths as Expression<Func<T, object>>[] ?? includePaths.ToArray();
+            //improve performance when there i only one include
+            if (includePathsArray.Length == 1)
+            {
+                return await FindAsync(keyValues, projection, includePathsArray.First());
+            }
+
+            //eager works only when "include" in "projection"
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludes(includePathsArray);
+
+            //TODO: not good performance as projection is not in SQL
+            var rawResult = await ObjectSet
+                .IncludeToQuery(includePathsArray)
+                .FilterQueryByKeys(_keys, keyValues).ToListAsync();
+
+            var materializedResult = rawResult
+                .Select(projectionWithIncludes.Compile()).SingleOrDefault();
+
+            if (materializedResult == null)
+                return default(TR);
+
+            var res = materializedResult
+                .Where(x => x.Key == "Entity")
+                .Select(x => (T)x.Value)
+                .Select(projection.Compile()).SingleOrDefault();
+
+            return res;
+        }
+
+        /// <inheritdoc />
+        public async Task<IEnumerable<T>> FindByAsync(IQueryCommand<T> queryObject)
+        {
+            return await Set
+                .Where(queryObject.Predicate)
+                .ToListAsync();
+        }
+
+        /// <inheritdoc />
+        public Task<IEnumerable<TR>> FindByAsync<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection)
+        {
+            return FindByAsync(queryObject.Predicate, projection);
+        }
+
+        /// <inheritdoc />
+        public Task<IEnumerable<TR>> FindByAsync<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            return FindByAsync(queryObject.Predicate, projection, includePathsFactory);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
+        public Task<IEnumerable<TR>> FindByAsync<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            return FindByAsync(queryObject.Predicate, projection, includePaths);
+        }
+
+        /// <inheritdoc />
+        public Task<int> CountByAsync(IQueryCommand<T> queryObject)
+        {
+            return Set.CountAsync(queryObject.Predicate);
+        }
+
+        /// <inheritdoc />
+        public Task<bool> AnyByAsync(IQueryCommand<T> queryObject)
+        {
+            return Set.AnyAsync(queryObject.Predicate);
+        }
+
+        /// <inheritdoc />
+        public async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await Set.Where(predicate).ToListAsync();
+        }
+
+        /// <inheritdoc/>
+        public async Task<IEnumerable<TR>> FindByAsync<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection)
+        {
+            return await Set.Where(predicate).Select(projection).ToListAsync();
+        }
+
+        /// <inheritdoc/>
+        public async Task<IEnumerable<TR>> FindByAsync<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            var includePaths = ExpressionHelper.ToStringsIncludePaths(includePathsFactory);
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludesAsAnonymous(projection, includePathsFactory);
+
+            var materializedResult = await ObjectSet
+                .IncludeToQuery(includePaths)
+                .Where(predicate)
+                .Select(projectionWithIncludes).ToListAsync();
+
+            return materializedResult.Select(x => x.Data).ToList();
+        }
+
+        /// <inheritdoc/>
+        [Obsolete("Bad performance as uses a projection on objects in memory. Use method with includePaths as Anonymous type")]
+        public async Task<IEnumerable<TR>> FindByAsync<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            var includePathsArray = includePaths as Expression<Func<T, object>>[] ?? includePaths.ToArray();
+            //improve performance when there is only one include
+            if (includePathsArray.Length == 1)
+            {
+                return await FindByAsync(predicate, projection, includePathsArray.First());
+            }
+            
+            //eager works only when "include" in "projection"
+            var projectionWithIncludes = ExpressionHelper.TranslateToProjectionWithIncludes(includePathsArray);
+
+            var rawResults = await ObjectSet
+                .IncludeToQuery(includePathsArray)
+                .Where(predicate).ToListAsync();
+
+            //TODO: not good performance as projection is not in SQL
+            var materializedResults = rawResults
+                .Select(projectionWithIncludes.Compile()).ToList();
+
+            var results = materializedResults
+                .Select(materializedResult => materializedResult
+                    .Where(x => x.Key == "Entity")
+                    .Select(x => (T)x.Value)
+                    .Select(projection.Compile())
+                    .SingleOrDefault())
+                .ToList();
+
+            return results;
+        }
+
+        /// <inheritdoc />
+        public Task<int> CountByAsync(Expression<Func<T, bool>> predicate)
+        {
+            return Set.CountAsync(predicate);
+        }
+
+        /// <inheritdoc />
+        public Task<bool> AnyByAsync(Expression<Func<T, bool>> predicate)
+        {
+            return Set.AnyAsync(predicate);
+        }
+
+        #endregion
     }
 
     public static class QueryObjectsExtenssionsHelper
@@ -394,6 +537,16 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         }
 
         public static IQueryable<T> IncludeToQuery<T>(this IQueryable<T> query, IEnumerable<Expression<Func<T, object>>> includePaths)
+        {
+            return includePaths.Aggregate(query, (current, path) => current.Include(path));
+        }
+
+        public static ObjectQuery<T> IncludeToQuery<T>(this ObjectQuery<T> query, IEnumerable<string> includePaths)
+        {
+            return includePaths.Aggregate(query, (current, path) => current.Include(path));
+        }
+
+        public static IQueryable<T> IncludeToQuery<T>(this IQueryable<T> query, IEnumerable<string> includePaths)
         {
             return includePaths.Aggregate(query, (current, path) => current.Include(path));
         }
@@ -418,9 +571,9 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
         }
     }
 
-    public static class ExpressionHelper
+    internal static class ExpressionHelper
     {
-        public static Expression<Func<T, Dictionary<string, object>>> TranslateToProjectionWithIncludes<T>(IEnumerable<Expression<Func<T, object>>> includePaths)
+        internal static Expression<Func<T, Dictionary<string, object>>> TranslateToProjectionWithIncludes<T>(IEnumerable<Expression<Func<T, object>>> includePaths)
         {
             var includeFields = includePaths.Select(x => ((MemberExpression)x.Body).Member.Name).ToList();
 
@@ -440,12 +593,111 @@ namespace dcp.DDD.Infrastructure.Data.EF.SuperTypes
             var selector = Expression.ListInit(Expression.New(typeof(Dictionary<string, object>)), elementInits);
             return Expression.Lambda<Func<T, Dictionary<string, object>>>(
                 selector, itemParam);
+        }
 
+        internal static Expression<Func<T, ProjectionWithIncludes<TR>>> TranslateToProjectionWithIncludesAsAnonymous<T, TR>(Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory)
+        {
+            var entityType = typeof(T);
+            var itemParam = Expression.Parameter(entityType, "x");
+            
+            var projectionType = typeof(ProjectionWithIncludes<TR>);
+            var newExp = Expression.New(projectionType);
+           
+            //replace "x" to use same paramter in two lambda expressions
+            var fixedProjection = ParameterReplacer.Replace<Func<T, TR>, Func<T, TR>>(projection, itemParam);
+            var fixedIncludePathsFactory = ParameterReplacer.Replace<Func<T, object>, Func<T, object>>(includePathsFactory, itemParam);
+            var selector = Expression.MemberInit(newExp,
+                Expression.Bind(projectionType.GetProperty("Data"), fixedProjection.Body),
+                Expression.Bind(projectionType.GetProperty("Includes"), fixedIncludePathsFactory.Body)
+            );
+
+            return Expression.Lambda<Func<T, ProjectionWithIncludes<TR>>>(
+                selector, itemParam);
+        }
+
+        internal static IEnumerable<string> ToStringsIncludePaths<T>(Expression<Func<T, object>> includePathsFactory)
+        {
+            if (includePathsFactory.Body is NewExpression)
+            {
+                var newExp = includePathsFactory.Body as NewExpression;
+                var includePaths = new List<string>();
+                foreach (var argumentExp in newExp.Arguments)
+                {
+                    var memberExp = argumentExp as MemberExpression;
+                    if (memberExp == null)
+                        throw new NotSupportedException("Supported only create instance of anonymous type");
+                    includePaths.Add(GetIncludePath(memberExp));
+                }
+
+                return includePaths;
+            }
+
+            if (includePathsFactory.Body is MemberExpression)
+            {
+                var memberExp = includePathsFactory.Body as MemberExpression;
+                return new[] {GetIncludePath(memberExp)};
+            }
+            
+            throw new NotSupportedException("Supported only create instance of anonymous type or single access member");
+        }
+
+        private static string GetIncludePath(MemberExpression memberExpression)
+        {
+            var path = "";
+            if (memberExpression.Expression is MemberExpression)
+            {
+                path = GetIncludePath((MemberExpression)memberExpression.Expression) + ".";
+            }
+            var propertyInfo = (PropertyInfo)memberExpression.Member;
+            return path + propertyInfo.Name;
         }
     }
 
+    internal class ProjectionWithIncludes<T>
+    {
+        public T Data { get; set; }
+        public object Includes { get; set; }
+    }
 
+    internal static class ParameterReplacer
+    {
+        // Produces an expression identical to 'expression'
+        // except with 'source' parameter replaced with 'target' expression.     
+        public static Expression<TOutput> Replace<TInput, TOutput>
+        (Expression<TInput> expression,
+            ParameterExpression target)
+        {
+            return new ParameterReplacerVisitor<TOutput>(expression.Parameters[0], target)
+                .VisitAndConvert(expression);
+        }
 
+        private class ParameterReplacerVisitor<TOutput> : ExpressionVisitor
+        {
+            private readonly ParameterExpression _source;
+            private readonly ParameterExpression _target;
 
+            public ParameterReplacerVisitor(ParameterExpression source, ParameterExpression target)
+            {
+                _source = source;
+                _target = target;
+            }
+
+            internal Expression<TOutput> VisitAndConvert<T>(Expression<T> root)
+            {
+                return (Expression<TOutput>)VisitLambda(root);
+            }
+
+            protected override Expression VisitLambda<T>(Expression<T> node)
+            {
+                return Expression.Lambda<TOutput>(Visit(node.Body), _target);
+            }
+
+            protected override Expression VisitParameter(ParameterExpression node)
+            {
+                // Replace the source with the target, visit other params as usual.
+                return node == _source ? _target : base.VisitParameter(node);
+            }
+        }
+    }
 
 }

@@ -34,6 +34,7 @@ Download a zip-archive with dll-files manually from [https://github.com/ziic/dcp
 As NuGet packages:
 * [https://www.nuget.org/packages/dcp.DDD.DomainModel](https://www.nuget.org/packages/dcp.DDD.DomainModel)
 * [https://www.nuget.org/packages/dcp.DDD.DataInfrastructure](https://www.nuget.org/packages/dcp.DDD.DataInfrastructure)
+* [https://www.nuget.org/packages/dcp.DDD.EFAdapted](https://www.nuget.org/packages/dcp.DDD.EFAdapted)
 
 # How To use
 
@@ -42,6 +43,8 @@ See wiki [https://github.com/ziic/dcp-DDD-Foundation/wiki](https://github.com/zi
 # Documentation
 
 You can download documentation from releases page: [https://github.com/ziic/dcp-DDD-Foundation/releases](https://github.com/ziic/dcp-DDD-Foundation/releases).
+
+As the library are fully covered with unit tests, you can also use them to learn how it works.
 
 
 

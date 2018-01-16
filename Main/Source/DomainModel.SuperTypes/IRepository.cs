@@ -5,35 +5,27 @@ using System.Linq.Expressions;
 namespace dcp.DDD.DomainModel.SuperTypes
 {
     /// <summary>
-    /// Default repository contract
+    /// Repository contract
     /// </summary>
     /// <typeparam name="T">Entity type</typeparam>
     public interface IRepository<T>
         where T : class
     {
         /// <summary>
-        /// Returns all entites
+        /// Return all entites
         /// </summary>
         /// <returns>Entities</returns>
         IEnumerable<T> GetAll();
         
         /// <summary>
-        /// Finds single entity by key values
+        /// Find single entity by key values
         /// </summary>
         /// <param name="keyValues">Key values</param>
         /// <returns>Entity</returns>
         T Find(params object[] keyValues);
 
         /// <summary>
-        /// Finds single entity by key values, eager loads related entities
-        /// </summary>
-        /// <param name="keyValues">Key values</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity</returns>
-        T Find(object[] keyValues, IEnumerable<Expression<Func<T, object>>> includePaths);
-
-        /// <summary>
-        /// Finds single entity by key value, eager loads related entities
+        /// Find single entity by key value, eager load related entities
         /// </summary>
         /// <param name="keyValue">Key value</param>
         /// <param name="includePaths">Paths of related entites</param>
@@ -41,16 +33,24 @@ namespace dcp.DDD.DomainModel.SuperTypes
         T Find(object keyValue, IEnumerable<Expression<Func<T, object>>> includePaths);
 
         /// <summary>
-        /// Finds single entity by single key value, eager load one related entity (short method)
+        /// Find single entity by key values, eager load related entities
         /// </summary>
-        /// <param name="keyValue">Key value</param>
+        /// <param name="keyValues">Key values</param>
         /// <param name="includePaths">Paths of related entites</param>
         /// <returns>Entity</returns>
-        /// <remarks>Use only when single include path</remarks>
-        T Find(object keyValue, params Expression<Func<T, object>>[] includePaths);
+        T Find(object[] keyValues, IEnumerable<Expression<Func<T, object>>> includePaths);
 
         /// <summary>
-        /// Finds single entity by key values and retutns entity projection
+        /// Find single entity by key value and return entity projection
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="keyValue">Key value</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <returns>Entity projection</returns>
+        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection);
+
+        /// <summary>
+        /// Find single entity by key values and return entity projection
         /// </summary>
         /// <typeparam name="TR">Entity projection</typeparam>
         /// <param name="keyValues">Key values</param>
@@ -59,43 +59,56 @@ namespace dcp.DDD.DomainModel.SuperTypes
         TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection);
 
         /// <summary>
-        /// Finds single entity by key value and returns entity projection
+        /// Find single entity by single key value, eager load related entities and return enity projection
         /// </summary>
         /// <typeparam name="TR">Entity projection</typeparam>
         /// <param name="keyValue">Key value</param>
         /// <param name="projection">Factory of entity projection</param>
+        /// <param name="includePathsFactory">Factory for paths of related entites</param>
         /// <returns>Entity projection</returns>
-        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection);
-        
+        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory);
+
         /// <summary>
-        /// Finds single entity by key values, eager loads related entities and returns entity projection
+        /// Find single entity by single key value, eager load related entities and return enity projection
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="keyValue">Key value</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <param name="includePaths">Paths of related entites</param>
+        /// <returns>Entity projection</returns>
+        [Obsolete("Use method with includePaths factory as Anonymous type")]
+        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
+
+        /// <summary>
+        /// Find single entity by key values, eager load related entities and return entity projection
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="keyValues">Key values</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <param name="includePathsFactory">Factory for paths of related entites</param>
+        /// <returns>Entity projection</returns>
+        TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory);
+
+        /// <summary>
+        /// Find single entity by key values, eager load related entities and return entity projection
         /// </summary>
         /// <typeparam name="TR">Entity projection</typeparam>
         /// <param name="keyValues">Key values</param>
         /// <param name="projection">Factory of entity projection</param>
         /// <param name="includePaths">Paths of related entites</param>
         /// <returns>Entity projection</returns>
+        [Obsolete("Use method with includePaths factory as Anonymous type")]
         TR Find<TR>(object[] keyValues, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
-
+        
         /// <summary>
-        /// Finds single entity by single key value, eager loads related entities and returns enity projection
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="keyValue">Key value</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity projection</returns>
-        TR Find<TR>(object keyValue, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths);
-
-        /// <summary>
-        /// Finds entities satisfied with query command
+        /// Find entities satisfied with query command
         /// </summary>
         /// <param name="queryObject">Query command</param>
         /// <returns>Entites</returns>
         IEnumerable<T> FindBy(IQueryCommand<T> queryObject);
 
         /// <summary>
-        /// Finds entities satisfied with predicate
+        /// Find entities satisfied with predicate
         /// </summary>
         /// <typeparam name="TR">Entity projection</typeparam>
         /// <param name="queryObject">Query command</param>
@@ -104,41 +117,94 @@ namespace dcp.DDD.DomainModel.SuperTypes
         IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection);
 
         /// <summary>
-        /// Finds entities satisfied with query command, eager loads related entities and returns entity projections
+        /// Find entities satisfied with query command, eager load related entities and return entity projections
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="queryObject">Query command</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <param name="includePathsFactory">Factory of paths to related entites</param>
+        /// <returns>Entity projections</returns>
+        IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory);
+
+        /// <summary>
+        /// Find entities satisfied with query command, eager load related entities and return entity projections
         /// </summary>
         /// <typeparam name="TR">Entity projection</typeparam>
         /// <param name="queryObject">Query command</param>
         /// <param name="projection">Factory of entity projection</param>
         /// <param name="includePaths">Paths of related entites</param>
         /// <returns>Entity projections</returns>
+        [Obsolete("Use method with includePaths factory as Anonymous type")]
         IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
 
         /// <summary>
-        /// Finds entities satisfied with query command, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="queryObject">Query command</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entity projections</returns>
-        IEnumerable<TR> FindBy<TR>(IQueryCommand<T> queryObject, Expression<Func<T, TR>> projection, params Expression<Func<T, object>>[] includePaths);
-
-        /// <summary>
-        /// Gets count of entities satisfied with query command
+        /// Get count of entities satisfied with query command
         /// </summary>
         /// <param name="queryObject">Query command</param>
         /// <returns>Count</returns>
         int CountBy(IQueryCommand<T> queryObject);
 
         /// <summary>
-        /// Checks if elements satisfied with query are exists
+        /// Check if elements satisfied with query are exists
         /// </summary>
         /// <param name="queryObject">Query</param>
         /// <returns>Is any</returns>
         bool AnyBy(IQueryCommand<T> queryObject);
+        
 
         /// <summary>
-        /// Adds entity to repository
+        /// Find entities satisfied with predicate
+        /// </summary>
+        /// <param name="predicate">Query predicate</param>
+        /// <returns>Entites</returns>
+        IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
+
+        /// <summary>
+        /// Find entities satisfied with predicate
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="predicate">Query predicate</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <returns>Entites projetions</returns>
+        IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection);
+
+        /// <summary>
+        /// Find entities satisfied with predicate, eager loads related entities and return entity projections
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="predicate">Query predicate</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <param name="includePathsFactory">Factory for paths to related entites</param>
+        /// <returns>Entites projetions</returns>
+        IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, Expression<Func<T, object>> includePathsFactory);
+
+        /// <summary>
+        /// Find entities satisfied with predicate, eager load related entities and return entity projections
+        /// </summary>
+        /// <typeparam name="TR">Entity projection</typeparam>
+        /// <param name="predicate">Query predicate</param>
+        /// <param name="projection">Factory of entity projection</param>
+        /// <param name="includePaths">Paths of related entites</param>
+        /// <returns>Entites projetions</returns>
+        [Obsolete("Use method with includePaths factory as Anonymous type")]
+        IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
+        
+        /// <summary>
+        /// Get count of entities satisfied with query predicate
+        /// </summary>
+        /// <param name="predicate">Query predicate</param>
+        /// <returns>Count</returns>
+        int CountBy(Expression<Func<T, bool>> predicate);
+
+        /// <summary>
+        /// Check if entites satisfied with query predicate are exists
+        /// </summary>
+        /// <param name="predicate">Query predicate</param>
+        /// <returns>Is Any</returns>
+        bool AnyBy(Expression<Func<T, bool>> predicate);
+
+        /// <summary>
+        /// Add entity to repository
         /// </summary>
         /// <param name="entity">Entity</param>
         /// <returns>Entity</returns>
@@ -150,58 +216,6 @@ namespace dcp.DDD.DomainModel.SuperTypes
         /// <param name="entities">Entities</param>
         /// <returns>Entities</returns>
         IEnumerable<T> AddRange(IEnumerable<T> entities);
-
-        /// <summary>
-        /// Finds entities satisfied with predicate
-        /// </summary>
-        /// <param name="predicate">Query predicate</param>
-        /// <returns>Entites</returns>
-        IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
-
-        /// <summary>
-        /// Finds entities satisfied with predicate
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="predicate">Query predicate</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <returns>Entites projetions</returns>
-        IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection);
-
-        
-        /// <summary>
-        /// Finds entities satisfied with predicate, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="predicate">Query predicate</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entites projetions</returns>
-        IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection, IEnumerable<Expression<Func<T, object>>> includePaths);
-
-        /// <summary>
-        /// Finds entities satisfied with predicate, eager loads related entities and returns entity projections
-        /// </summary>
-        /// <typeparam name="TR">Entity projection</typeparam>
-        /// <param name="predicate">Query predicate</param>
-        /// <param name="projection">Factory of entity projection</param>
-        /// <param name="includePaths">Paths of related entites</param>
-        /// <returns>Entites projetions</returns>
-        IEnumerable<TR> FindBy<TR>(Expression<Func<T, bool>> predicate, Expression<Func<T, TR>> projection,
-            params Expression<Func<T, object>>[] includePaths);
-
-        /// <summary>
-        /// Gets count of entities satisfied with query predicate
-        /// </summary>
-        /// <param name="predicate">Query predicate</param>
-        /// <returns>Count</returns>
-        int CountBy(Expression<Func<T, bool>> predicate);
-
-        /// <summary>
-        /// Checks if entites satisfied with query predicate are exists
-        /// </summary>
-        /// <param name="predicate">Query predicate</param>
-        /// <returns>Is Any</returns>
-        bool AnyBy(Expression<Func<T, bool>> predicate);
 
         /// <summary>
         /// Remove entity
@@ -222,22 +236,5 @@ namespace dcp.DDD.DomainModel.SuperTypes
         /// <param name="entities">Entities</param>
         /// <returns>Entities</returns>
         IEnumerable<T> RemoveRange(IEnumerable<T> entities);
-
-    }
-
-    public static class RepositoryExtenssions
-    {
-        /// <summary>
-        /// More useful method when eager loads several related entities
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="repository"></param>
-        /// <param name="keyValue"></param>
-        /// <param name="includePaths"></param>
-        /// <returns></returns>
-        public static T FindOnlyWithIncludes<T>(this IRepository<T> repository, object keyValue, params Expression<Func<T, object>>[] includePaths) where T : class
-        {
-            return repository.Find(keyValue, includePaths);
-        }
     }
 }

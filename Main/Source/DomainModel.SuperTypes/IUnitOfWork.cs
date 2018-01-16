@@ -12,4 +12,15 @@ namespace dcp.DDD.DomainModel.SuperTypes
         /// </summary>
         void Commit();
     }
+
+    /// <summary>
+    /// Represent asynchronous unit of work
+    /// </summary>
+    public interface IUnitOfWorkAsync : IDisposable
+    {
+        /// <summary>
+        /// Commit all changes
+        /// </summary>
+        void CommitAsync();
+    }
 }

@@ -10,6 +10,6 @@
     <description>$description$</description>    
     <copyright>$copyright$</copyright>
     <tags>DDD, domain</tags>
-    <releaseNotes>Upgrade to .net 4.6.2</releaseNotes>
+    <releaseNotes>Async operations, remove automapper dependency</releaseNotes>
   </metadata>
 </package>

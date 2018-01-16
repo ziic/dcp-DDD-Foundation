@@ -10,6 +10,6 @@
     <description>$description$</description>    
     <copyright>$copyright$</copyright>
     <tags>DDD, data, infrastructure</tags>
-    <releaseNotes>Upgraded to .net 4.6.2, upgraded packages dependencies</releaseNotes>
+    <releaseNotes>Async operations</releaseNotes>
   </metadata>
 </package>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>dcp.DDD.EFAdapted</id>
+    <version>$version$</version>
+    <title>dcp DDD Infrastructure Data Atapted</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>    
+    <copyright>$copyright$</copyright>
+    <tags>DDD, data, infrastructure</tags>
+    <releaseNotes>Transform domain entities using automapper</releaseNotes>
+  </metadata>
+</package>
